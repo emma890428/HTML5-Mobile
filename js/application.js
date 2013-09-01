@@ -1,8 +1,10 @@
 var NotesApp = (function(){
 	var App = {
 		stores: {},
+
 		views:{},
 		collections:{}
+
 	}
 
 	//Initialize localStorage Data Store
@@ -55,6 +57,7 @@ var NotesApp = (function(){
 		createNote: function(e){
 			var attrs = this.getAttributes(),
 				note = new Note();
+
 			var _this = this;
 
 			function create(theThis){
@@ -82,18 +85,21 @@ var NotesApp = (function(){
 				create(_this);
 			}
 
+
 			//Stop browser from actually submitting the form like normal
 			e.preventDefault();
 			//Stop jQuery Mobile from doing its form magic
 			e.stopPropagation();
-	
+
 		},
 
 		getAttributes: function () {
 			return {
+
 				title: this.$('form [name="title"]').val(),
 				body: this.$('form [name="body"]').val(),
 				locate: this.$('form [name="locate"]').val()
+
 			}
 		},
 
@@ -205,6 +211,7 @@ var NotesApp = (function(){
 		render: function(){
 			$(this.el).html(this.template({note: this.model}));
 			return this;
+
 		}
 	});
 
@@ -232,3 +239,4 @@ var NotesApp = (function(){
 
 	return App;
 })();
+
