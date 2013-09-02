@@ -1,5 +1,4 @@
 var NotesApp = (function(){
-
 	var debug = false;
 
 	function fuzzCoords(coords){
@@ -94,7 +93,6 @@ var NotesApp = (function(){
 		    var d = Math.round(R * c * 100)/100;
 
 		    return d;
-
 		}
 	});
 
@@ -148,7 +146,6 @@ var NotesApp = (function(){
 		createNote: function(e){
 			var attrs = this.getAttributes(),
 				note = new Note();
-
 			var _this = this;
 
 			function create(theThis){
@@ -185,7 +182,7 @@ var NotesApp = (function(){
 			e.preventDefault();
 			//Stop jQuery Mobile from doing its form magic
 			e.stopPropagation();
-
+	
 		},
 
 		getAttributes: function () {
